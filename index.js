@@ -3,4 +3,4 @@ const token = require('./token.json').token;
 
 const discard = new Discardo(token);
 
-discard.connect()
+discard.start()
