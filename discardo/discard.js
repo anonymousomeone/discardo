@@ -1,13 +1,13 @@
-const Client = require("./client");
+const Websock = require("./gateway/websock.js");
 
 
 class Discard {
     constructor(token) {
-        this.client = new Client(token);
+        this.websock = new Websock(token, this);
     }
 
     start() {
-        this.client.connect();
+        this.websock.connect();
     }
 
 }
